@@ -1,24 +1,42 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file
 
 buildscript {
-    
+
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+
+        // مستودع Xposed الجديد
+        maven {
+            url "https://api.xposed.info/"
+        }
+
+        // احتياطي
+        maven {
+            url "https://jitpack.io"
+        }
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
-        
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
 allprojects {
+
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+
+        // مستودع Xposed
+        maven {
+            url "https://api.xposed.info/"
+        }
+
+        // احتياطي
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 
